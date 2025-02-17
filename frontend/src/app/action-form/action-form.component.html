@@ -1,0 +1,19 @@
+<form (submit)="submitAction()">
+    <mat-form-field>
+      <mat-label>Action</mat-label>
+      <input matInput [(ngModel)]="action" required>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-label>Date</mat-label>
+      <input matInput type="date" [(ngModel)]="date" required>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-label>Points</mat-label>
+      <input matInput type="number" [(ngModel)]="points" required>
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" type="submit">Add Action</button>
+  </form>
+  
