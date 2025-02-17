@@ -1,0 +1,28 @@
+<div class="container">
+  <h2>Sustainability Tracker</h2>
+
+  <!-- Add Action Form -->
+  <form (ngSubmit)="addAction()">
+    <input type="text" placeholder="Action" [(ngModel)]="newAction.action" name="action" required />
+    <input type="date" [(ngModel)]="newAction.date" name="date" required />
+    <input type="number" placeholder="Points" [(ngModel)]="newAction.points" name="points" required />
+    <button type="submit">Add Action</button>
+  </form>
+
+  <!-- Display Actions -->
+  <h3>Tracked Actions</h3>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Action</th>
+      <th>Date</th>
+      <th>Points</th>
+    </tr>
+    <tr *ngFor="let action of actions">
+      <td>{{ action.id }}</td>
+      <td>{{ action.action }}</td>
+      <td>{{ action.date }}</td>
+      <td>{{ action.points }}</td>
+    </tr>
+  </table>
+</div>
